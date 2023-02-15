@@ -1,7 +1,7 @@
 /*Explore Differences Between the var and let Keywords=>
 
 //========================================================
-//var=>
+//var========================================================================>
 One of the biggest problems with declaring variables with the 
 var keyword is that you can easily overwrite variable declarations:
 
@@ -15,14 +15,30 @@ In a small application, you might not run into this type of problem.
 But as your codebase becomes larger, you might accidentally overwrite 
 a variable that you did not intend to. Because this behavior does not 
 throw an error, searching for and fixing bugs becomes more difficult.
-//let=>
+//let==========================================================================>
 A keyword called let was introduced in ES6, a major update to JavaScript, 
 to solve this potential issue with the var keyword. You'll learn about other ES6 features in later challenges.
 
-If you replace var with let in the code above, it results in an error:
+If you replace var with let in the code above, it results in an error:*/
 
-let camper = "James";
-let camper = "David";
-The error can be seen in your browser console.
+//let camper = "James";
+//let camper = "David";
+/*The error can be seen in your browser console.
 
 So unlike var, when you use let, a variable with the same name can only be declared once. */
+
+// const==============================================================================>
+
+// The const declaration has many use cases in modern JavaScript.
+
+// Some developers prefer to assign all their variables using const by default,
+//  unless they know they will need to reassign the value. Only in that case, they use let.
+
+// However, it is important to understand that objects (including arrays and functions) 
+// assigned to a variable using const are still mutable. 
+// Using the const declaration only prevents reassignment of the variable identifier.
+
+const s = [5, 6, 7];
+s = [1, 2, 3];// show error
+s[2] = 45;// allowed
+console.log(s);
